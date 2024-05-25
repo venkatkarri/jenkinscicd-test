@@ -8,7 +8,7 @@ environment {
     stage('aws configure') { 
      steps{ 
      withCredentials([aws( 
-$class: 'AmazonWebServicesCredentialsBinding', 
+// $class: 'AmazonWebServicesCredentialsBinding', 
 accessKeyVariable: 'AWS_ACCESS_KEY_ID', 
 credentialsId: 'aws_siddu', 
 secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
