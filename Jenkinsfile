@@ -2,7 +2,7 @@
 pipeline { 
   agent any 
 environment { 
-  Version='$BUILD_NUMBER' 
+  // Version='$BUILD_NUMBER' 
 }
   stages { 
     stage('aws configure') { 
@@ -22,8 +22,8 @@ secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
     
     stage('1st') { 
      steps{ 
-       sh '''docker tag kvsvenkat/tfapps-portal-febe:1.1.1 590183680362.dkr.ecr.eu-north-1.amazonaws.com/dockertestrepo:$Version''' 
-       sh '''docker push 590183680362.dkr.ecr.eu-north-1.amazonaws.com/dockertestrepo:$Version'''
+       sh '''docker tag kvsvenkat/tfapps-portal-febe:1.1.1 590183680362.dkr.ecr.eu-north-1.amazonaws.com/dockertestrepo:1.2''' 
+       sh '''docker push 590183680362.dkr.ecr.eu-north-1.amazonaws.com/dockertestrepo:1.2'''
 
 }
 
